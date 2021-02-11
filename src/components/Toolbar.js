@@ -8,7 +8,9 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button'
 import {indigo,grey} from '@material-ui/core/colors';
-import { createMuiTheme} from '@material-ui/core'
+import { createMuiTheme} from '@material-ui/core';
+import { Link } from 'react-router-dom';
+
 
 
 const theme =createMuiTheme({
@@ -101,12 +103,12 @@ class ToolbarComponent extends React.Component {
         </Grid>
          
         <Grid  container justify="space-evenly" item xs={9} className={classes.root}  >
-           <Button>HOME PAGE</Button>
-           <Button>ABOUT</Button>
-           <Button>INSTITUTES</Button>
-           <Button>BECOME A TEACHER</Button>
-           <Button>BECOME A STUDENT</Button>
-           <Button>CONTACT</Button>
+           <Button component={Link} to="/">HOME PAGE</Button>
+           <Button component={Link} to="/about">ABOUT</Button>
+           <Button component={Link} to="/">INSTITUTES</Button>
+           <Button component={Link} to="/">BECOME A TEACHER</Button>
+           <Button component={Link} to="/">BECOME A STUDENT</Button>
+           <Button component={Link} to="/contact">CONTACT</Button>
            
 
         </Grid>
